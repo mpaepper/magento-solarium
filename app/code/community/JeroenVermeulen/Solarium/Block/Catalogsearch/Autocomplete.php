@@ -54,11 +54,11 @@ class JeroenVermeulen_Solarium_Block_Catalogsearch_Autocomplete extends Mage_Cat
                 $html .= '<span class="suggestions-productimage">';
                 $html .= sprintf(
                     '<img src="%s" />',
-                    htmlentities( Mage::helper( 'catalog/image' )->init( $product, 'thumbnail' )->resize( '50' ) )
+                    Mage::helper( 'catalog/image' )->init( $product, 'thumbnail' )->resize( '50' )
                 );
                 $html .= '</span>';
                 $html .= '<span class="suggestions-productname">';
-                $html .= htmlentities( Mage::helper( 'core/string' )->truncate( $product->getName(), 100 ) );
+                $html .= Mage::helper( 'core/string' )->truncate( $product->getName(), 100 );
                 $html .= '</span>';
                 $html .= '</li>';
             }
